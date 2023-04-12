@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "singularName": "organization",
+    "pluralName": "organizations",
+    "displayName": "Organization",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "verify": {
+      "type": "component",
+      "repeatable": false,
+      "component": "verification.organization"
+    },
+    "organization_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::organization-user.organization-user",
+      "mappedBy": "organization"
+    },
+    "oppurtunities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::oppurtunity.oppurtunity",
+      "mappedBy": "organization"
+    },
+    "website_link": {
+      "type": "string"
+    }
+  }
+}

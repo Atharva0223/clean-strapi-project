@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_verification_organizations",
+  "info": {
+    "displayName": "organization"
+  },
+  "options": {},
+  "attributes": {
+    "select": {
+      "type": "enumeration",
+      "enum": [
+        "website",
+        "social",
+        "cin"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

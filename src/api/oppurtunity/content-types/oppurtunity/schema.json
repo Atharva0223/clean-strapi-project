@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oppurtunities",
+  "info": {
+    "singularName": "oppurtunity",
+    "pluralName": "oppurtunities",
+    "displayName": "Opportunity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "organization": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization.organization",
+      "inversedBy": "oppurtunities"
+    },
+    "organization_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization-user.organization-user",
+      "inversedBy": "oppurtunities"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "text"
+    },
+    "opportunity_type": {
+      "type": "enumeration",
+      "enum": [
+        "internship",
+        "volunteer"
+      ]
+    },
+    "city": {
+      "type": "string"
+    },
+    "part_time": {
+      "type": "boolean"
+    },
+    "openings": {
+      "type": "integer"
+    },
+    "start_date": {
+      "type": "enumeration",
+      "enum": [
+        "immediately",
+        "later"
+      ]
+    },
+    "duration": {
+      "type": "string"
+    },
+    "months": {
+      "type": "string"
+    },
+    "responsibilities": {
+      "type": "text"
+    },
+    "stipend_type": {
+      "type": "enumeration",
+      "enum": [
+        "paid",
+        "unpaid",
+        "performance",
+        "negotiable"
+      ]
+    },
+    "currency": {
+      "type": "string"
+    },
+    "stipend_value": {
+      "type": "decimal"
+    },
+    "payment_type": {
+      "type": "string"
+    },
+    "perks": {
+      "type": "text"
+    },
+    "ppo": {
+      "type": "boolean"
+    },
+    "cover_letter": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "assessment_questions": {
+      "type": "text"
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating",
+      "mappedBy": "oppurtunity"
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "facilities": {
+      "type": "text"
+    },
+    "support": {
+      "type": "text"
+    },
+    "terms": {
+      "type": "text"
+    }
+  }
+}

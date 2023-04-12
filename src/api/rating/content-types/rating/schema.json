@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "singularName": "rating",
+    "pluralName": "ratings",
+    "displayName": "Rating",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "decimal",
+      "max": 5,
+      "min": 1
+    },
+    "oppurtunity": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::oppurtunity.oppurtunity",
+      "inversedBy": "ratings"
+    }
+  }
+}
