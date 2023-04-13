@@ -35,16 +35,15 @@ module.exports = {
           policies: [],
           middleware: [],
         },
-      }
       },
-      {
-        method: "GET",
-        path: "/findOngoing/:id",
-        handler: "my-controller.findOngoing",
-        config: {
-          policies: [],
-          middleware: [],
-        },
-      }
+      // {
+      //   method: "GET",
+      //   path: "/findOngoing/:id",
+      //   handler: "my-controller.findOngoing",
+      //   config: {
+      //     policies: [],
+      //     middleware: [],
+      //   },
+      // }
     ],
   };
